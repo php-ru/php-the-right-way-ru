@@ -3,61 +3,67 @@ isChild: true
 anchor:  mac_setup
 ---
 
-## Mac Setup {#mac_setup_title}
+## Настройка Mac {#mac_setup_title}
 
-macOS comes prepackaged with PHP but it is normally a little behind the latest stable release. There are multiple ways to install the latest PHP version on macOS.
+macOS поставляется в предварительно упакованным PHP, но обычно он немного отстает до последней стабильной версии. Существует несколько способов установить последнюю версию PHP на macOS.
 
-### Install PHP via Homebrew
+### Установка PHP через Homebrew
 
-[Homebrew] is a package manager for macOS that helps you easily install PHP and various extensions. The Homebrew core repository provides "formulae" for PHP 5.6, 7.0, 7.1, and 7.2. Install the latest version with this command:
+[Homebrew] — это менеджер пакетов для macOS, который помогает вам легко установить PHP и различные расширения к нему. Репозиторий ядра Homebrew предоставляет «формулы» для PHP 5.6, 7.0, 7.1 и 7.2. Установите последнюю версию можно с помощью этой команды:
 
 ```
 brew install php@7.2
 ```
 
-You can switch between Homebrew PHP versions by modifying your `PATH` variable. Alternatively, you can use [brew-php-switcher][brew-php-switcher] to switch PHP versions automatically.
+Вы можете переключаться между версиями PHP Homebrew, изменяя переменную окружения `PATH`. Кроме того, вы можете использовать [brew-php-switcher][brew-php-switcher] для автоматического переключения версий PHP.
 
-### Install PHP via Macports
+### Установка PHP через Macports
 
-The [MacPorts] Project is an open-source community initiative to design an
-easy-to-use system for compiling, installing, and upgrading either
-command-line, X11 or Aqua based open-source software on the OS X operating
-system.
+Проект [MacPorts] — разработка сообщества с открытым исходным кодом для разработки
+простой в использовании системы для компиляции, установки и обновления программного обеспечения 
+с открытым исходным кодом на основе командной строки X11 или Aqua в операционной системе OS X.
 
-MacPorts supports pre-compiled binaries, so you don't need to recompile every
-dependency from the source tarball files, it saves your life if you don't
-have any package installed on your system.
+MacPorts поддерживает предварительно скомпилированные двоичные файлы, 
+поэтому вам не нужно перекомпилировать каждую зависимость из исходных файлов в архиве,
+это поможет вам, если у вас нет какого-либо пакета, установленного в вашей системе.
 
-At this point, you can install `php54`, `php55`, `php56`, `php70` or `php71` using the `port install` command, for example:
+На этом этапе вы можете установить `php54`, `php55`, `php56`, `php70` или `php71`, используя команду `port install`, например:
 
     sudo port install php56
     sudo port install php71
 
-And you can run `select` command to switch your active PHP:
+И вы можете выполнить команду `select` для переключения активной версии PHP:
 
     sudo port select --set php php71
 
-### Install PHP via phpbrew
+### Установка PHP через phpbrew
 
-[phpbrew] is a tool for installing and managing multiple PHP versions. This can be really useful if two different
-applications/projects require different versions of PHP, and you are not using virtual machines.
+[phpbrew] — это инструмент для установки и управления несколькими версиями PHP. 
+Он может быть действительно полезным, если для двух разных приложений/проектов 
+требуются разные версии PHP, и вы не используете виртуальные машины.
 
-### Install PHP via Liip's binary installer
+### Установка PHP через двоичный установщик Liip
 
-Another popular option is [php-osx.liip.ch] which provides one liner installation methods for versions 5.3 through 7.1.
-It doesn't overwrite the PHP binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
+Другим популярным вариантом является [php-osx.liip.ch], который предоставляет 
+однострочный метод установки версий PHP с 5.3 по 7.1.
+Он не перезаписывает исполняемые файлы PHP, установленные Apple, а вместо это 
+устанавливает все в отдельном месте (/usr/local/php5).
 
-### Compile from Source
+### Компиляция из исходного кода
 
-Another option that gives you control over the version of PHP you install, is to [compile it yourself][mac-compile].
-In that case be sure to have installed either [Xcode][xcode-gcc-substitution] or Apple's substitute
-["Command Line Tools for XCode"] downloadable from Apple's Mac Developer Center.
+Другой вариант, который дает вам контроль над версией PHP,
+которую вы устанавливаете — это компиляция нужной версии PHP. 
+В этом случае обязательно установите [Xcode][xcode-gcc-substitution]
+или [замену от Apple][«Инструменты командной строки для XCode»],
+которые можно загрузить из Mac Developer Center от Apple.
 
-### All-in-One Installers
+### Универсальные или «всё в одном» установщики
 
-The solutions listed above mainly handle PHP itself, and do not supply things like Apache, Nginx or a SQL server.
-"All-in-one" solutions such as [MAMP][mamp-downloads] and [XAMPP][xampp] will install these other bits of software for
-you and tie them all together, but ease of setup comes with a trade-off of flexibility.
+Перечисленные выше решения в основном занимаются установкой только PHP 
+и не предоставляют ничего больше: ни Apache, ни Nginx или SQL-сервера.
+Решения типа «всё в одном», такие как [MAMP][mamp-downloads] и [XAMPP][xampp], 
+будут устанавливать эти остальные части программного обеспечения для вас и свяжет их все вместе, 
+однако подобное упрощение настройки сказывается на меньшей гибкости.
 
 [Homebrew]: https://brew.sh/
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
@@ -66,7 +72,7 @@ you and tie them all together, but ease of setup comes with a trade-off of flexi
 [php-osx.liip.ch]: https://php-osx.liip.ch/
 [mac-compile]: https://secure.php.net/install.macosx.compile
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
-["Command Line Tools for XCode"]: https://developer.apple.com/downloads
+[«Инструменты командной строки для XCode»]: https://developer.apple.com/downloads
 [mamp-downloads]: https://www.mamp.info/en/downloads/
 [xampp]: https://www.apachefriends.org/index.html
 [brew-php-switcher]: https://github.com/philcook/brew-php-switcher
