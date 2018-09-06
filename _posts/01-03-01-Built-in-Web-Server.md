@@ -13,7 +13,7 @@ anchor:  builtin_web_server
 > php -S localhost:8000
 {% endhighlight %}
 
-* [Узнать о встроенном веб-сервере командной строки][cli-server]
+* [Узнайте больше о встроенном веб-сервере командной строки][cli-server]
 
 
 [cli-server]: http://php.net/features.commandline.webserver
